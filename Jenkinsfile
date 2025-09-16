@@ -16,17 +16,7 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                bat 'npm install'
-            }
-        }
-
-        stage('Build Project') {
-            steps {
-                bat 'npm run build'
-            }
-        }
+        
 
         stage('Deploy to Netlify') {
             steps {
