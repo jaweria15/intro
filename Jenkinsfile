@@ -15,8 +15,7 @@ pipeline {
                 git branch: "${BRANCH}", credentialsId: "${GIT_CREDENTIALS_ID}", url: "${REPO_URL}"
             }
         }
-
-        stage('Install Dependencies') {
+stage('Install Dependencies') {
             steps {
                 bat 'npm install'
             }
@@ -27,6 +26,7 @@ pipeline {
                 bat 'npm run build'
             }
         }
+        
 
         stage('Deploy to Netlify') {
             steps {
