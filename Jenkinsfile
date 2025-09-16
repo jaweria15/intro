@@ -2,9 +2,11 @@ pipeline {
     agent any
 
     environment {
-        GIT_CREDENTIALS_ID = '	github-token' // Jenkins me save kiya hua GitHub credentials ka ID
+        GIT_CREDENTIALS_ID = 'github-token' 
         REPO_URL = 'https://github.com/jaweria15/intro.git'
         BRANCH = 'main'
+        NETLIFY_AUTH_TOKEN = credentials('NETLIFY_AUTH_TOKEN')
+        SITE_ID = 'fa8284ac-61c2-4b3e-ad2f-db958fda78a6'  
     }
 
     stages {
@@ -14,17 +16,21 @@ pipeline {
             }
         }
 
-        
-        stage('Commit & Push Changes') {
+        stage('Install Dependencies') {
             steps {
-                bat '''
-                    git config --global user.email "javeriaf322@gmail.com"
-                    git config --global user.name "Jaweria"
-                    git add .
-                    git commit -m "Automated build from Jenkins" || exit 0
-                    git push origin %BRANCH%
+                bat 'npm install'
+            }
+        }
 
-                '''
+        stage('Build Project') {
+            steps {
+                bat 'npm run build'
+            }
+        }
+
+        stage('Deploy to Netlify') {
+            steps {
+                bat "npx netlify deploy --dir=build --prod --auth=%NETLIFY_AUTH_TOKEN% --site=%SITE_ID%"
             }
         }
     }
