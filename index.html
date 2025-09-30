@@ -3,143 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Project Showcase</title>
+    <title>My Website</title>
     <style>
-        /* Reset and basic styling */
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfdfd;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            color: #333;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #4a90e2;
-            color: white;
-            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        h1 {
+            color: #007bff;
+            margin-top: 30px;
         }
-        header p {
-            font-size: 1.2rem;
-            font-weight: 300;
+        p {
+            color: #333;
         }
-
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            padding: 40px 20px;
-            gap: 20px;
+        .container {
+            background-color: white;
+            width: 50%;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: left;
         }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            padding: 25px;
-            max-width: 350px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-
-        .card h2 {
-            color: #4a90e2;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .card a {
+        .btn {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 20px;
-            color: white;
-            background-color: #4a90e2;
+            padding: 8px 15px;
+            border: 1px solid #007bff;
+            color: #007bff;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s;
+            border-radius: 5px;
+            transition: 0.3s;
         }
-
-        .card a:hover {
-            background-color: #357abd;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            main {
-                flex-direction: column;
-                align-items: center;
-            }
+        .btn:hover {
+            background-color: #007bff;
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Our Cloud Project</h1>
-        <p>Demonstrating cloud deployment using GitHub and Netlify</p>
-    </header>
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple HTML project created for the course <b>Virtualisation and Cloud Computing</b>.</p>
 
-    <main>
-        <div class="card">
-            <h2>Subhan</h2>
-            <p><b>ID:</b> 15752</p>
-            <p><b>Role:</b> Frontend & Deployment</p>
-            <p>Responsible for creating the UI structure, styling, and managing the deployment process.</p>
-            <a href="#" target="_blank">GitHub Profile</a>
-        </div>
-
-        <div class="card">
-            <h2>Yaseen</h2>
-            <p><b>ID:</b> 15798</p>
-            <p><b>Role:</b> Backend & Cloud Integration</p>
-            <p>Handled cloud configuration, backend setup, and ensuring smooth integration with GitHub.</p>
-            <a href="#" target="_blank">GitHub Profile</a>
-        </div>
-
-        <div class="card">
-            <h2>Waseem</h2>
-            <p><b>ID:</b> 15810</p>
-            <p><b>Role:</b> Project Coordinator</p>
-            <p>Managed overall project tasks, coordination among members, and final deployment verification.</p>
-            <a href="#" target="_blank">GitHub Profile</a>
-        </div>
-
-        <div class="card">
-            <h2>Project Details</h2>
-            <p><b>Course:</b> Virtualisation and Cloud Computing</p>
-            <p>This project demonstrates creating a cloud account, uploading files, making them public, and verifying deployment through GitHub and Netlify.</p>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2025 Team Project. All rights reserved.
-    </footer>
+    <div class="container">
+        <h2>About Me</h2>
+        <p><b>Name:</b> Jaweria</p>
+        <p><b>ID:</b> 15787</p>
+        <p>Check Pipelining...</p>
+        <p><b>Course:</b> Virtualisation and Cloud Computing</p>
+        <p>
+            This is my first deployment using GitHub and Netlify. 
+            The purpose of this project is to demonstrate the use of a cloud service by creating an account, 
+            uploading a file, making it public, and verifying deployment.
+        </p>
+        <a href="https://github.com/jaweria15" target="_blank" class="btn">Visit GitHub</a>
+    </div>
 
 </body>
 </html>
